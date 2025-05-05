@@ -18,14 +18,14 @@ router.post('/tasks', auth, async (req, res) => {
 });
 
 // Get tasks for a project
-router.get('/projects/:projectId/tasks', auth, async (req, res) => {
-  try {
-    const tasks = await Task.find({ project: req.params.projectId });
-    res.json(tasks);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
+// router.get('/projects/:projectId/tasks', auth, async (req, res) => {
+//   try {
+//     const tasks = await Task.find({ project: req.params.projectId });
+//     res.json(tasks);
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// });
 
 // Update task
 router.patch('/tasks/:id', auth, async (req, res) => {
